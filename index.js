@@ -18,13 +18,14 @@ document.getElementById('ticketForm').addEventListener('submit', function (event
         prezzoTotale -= prezzoTotale * 0.40;
     }
 
-
-    const risultatoDiv = document.getElementById('risultato');
-    const prezzoText = document.getElementById('prezzo');
-    prezzoText.innerHTML = `Ciao ${fullName}, il prezzo totale del biglietto è: <strong>€${prezzoTotale.toFixed(2)}</strong>`;
+    const risultatoCard = document.getElementById('risultatoCard');
 
 
-    risultatoDiv.style.display = 'block';
+    document.getElementById('nomeCompleto').textContent = `Ciao ${fullName}`;
+    document.getElementById('dettagli').textContent = `Km da percorrere: ${km} km - Fascia d'età: ${age === 'minor' ? 'Minorenne' : (age === 'senior' ? 'Over 65' : 'Maggiorenne')}`;
+    document.getElementById('prezzo').innerHTML = `Il prezzo totale del biglietto è: <strong>€${prezzoTotale.toFixed(2)}</strong>`;
+
+    risultatoCard.classList.remove('d-none');
 });
 
 
