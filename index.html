@@ -11,7 +11,7 @@
 <body class="bg-primary">
     <div class="container py-5">
         <h1 class="text-center mb-4">Calcola il Prezzo del Biglietto</h1>
-        <div class="card shadow p-4">
+        <div class="card shadow p-4 ">
             <form id="ticketForm">
                 <div class="mb-3">
                     <label for="fullName" class="form-label  ">Nome e Cognome</label>
@@ -37,14 +37,17 @@
                 <button type="submit" class="btn btn-primary w-100">Calcola</button>
 
             </form>
-            <div id="risultatoCard" class="container py-5 d-none">
+            <div id="risultatoCard" class="container py-5 d-none  ">
                 <h1 class="text-center py-5">Il tuo biglietto</h1>
-                <div class="card shadow p-4">
-                    <div class="card-body">
+                <div class="card shadow p-4  bg-info bg-opacity-10 border-opacity-50">
+                    <div class="card-body  d-flex justify-content-between">
                         <h5 class="card-title" id="nomeCompleto"></h5>
                         <p id="dettagli"></p>
                         <p id="prezzo"></p>
+
+                        <img src="./QR_code_for_mobile_English_Wikipedia.svg" alt="qr code biglietto">
                     </div>
+
                 </div>
             </div>
         </div>
